@@ -1,10 +1,10 @@
 ---
-# tasks file for configure_minecraft
-
-- name: Copia arquivo de configuracao do minecraft
-  copy:
-    src: /Users/alexanderqueiroz/minecraft_server/configure_minecraft/files/server.properties
+- name: Download Minecraft config
+  get_url:
+    url: "https://github.com/alexandercsq/minecraft_server/blob/main/configure_minecraft/files/servers.properties"
     dest: /opt/minecraft/server.properties
-    owner: opc
-    group: users
-    mode: 0644
+
+
+
+
+
