@@ -1,0 +1,13 @@
+--- 
+#Playbook Minecraft Server
+
+- name: Instalar e Configurar Minecraft
+  hosts: minecraft_servers
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - java
+    - minecraft
+    - configure_minecraft
+    - firewall

@@ -1,14 +1,10 @@
 ---
 # tasks file for configure_minecraft
 
-- name: Permite conexao TCP 25565
-- ansible.posix.firewalld:
-    port: 25565/tcp
-    permanent: true
-    state: enabled
-
-- name: Permite conexao UDP 25565
-- ansible.posix.firewalld:
-    port: 25565/udp
-    permanent: true
-    state: enabled
+- name: Copia arquivo de configuracao do minecraft
+  copy:
+    src: /Users/alexanderqueiroz/minecraft_server/configure_minecraft/files/server.properties
+    dest: /opt/minecraft/server.properties
+    owner: opc
+    group: users
+    mode: 0644

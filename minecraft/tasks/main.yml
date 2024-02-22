@@ -8,7 +8,7 @@
 
 - name: Download Minecraft server JAR
   get_url:
-    url: "https://launcher.mojang.com/v1/objects/{{ minecraft_version }}/server.jar"
+    url: "https://piston-data.mojang.com/v1/objects/8dd1a28015f51b1803213892b50b7b4fc76e594d/server.jar"
     dest: /opt/minecraft/server.jar
   vars:
     minecraft_version: "server-1.17.1"  # Versão do Minecraft desejada

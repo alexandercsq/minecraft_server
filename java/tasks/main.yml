@@ -3,5 +3,5 @@
 
 - name: Install Java (OpenJDK) on Oracle Linux
   yum:
-    name: openjdk
+    name: java-17-openjdk.aarch64
     state: present
