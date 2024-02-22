@@ -1,0 +1,14 @@
+---
+# tasks file for configure_minecraft
+
+- name: Permite conexao TCP 25565
+- ansible.posix.firewalld:
+    port: 25565/tcp
+    permanent: true
+    state: enabled
+
+- name: Permite conexao UDP 25565
+- ansible.posix.firewalld:
+    port: 25565/udp
+    permanent: true
+    state: enabled
